@@ -1,0 +1,22 @@
+# common
+.idea
+.git
+.DS_Store
+node_modules
+package-lock.json
+
+# cordova
+plugins
+platforms
+
+# frontle
+dist
+www/browser_modules
+res/.externalFrontle/www
+
+# vscode
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json

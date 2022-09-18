@@ -1,0 +1,18 @@
+/*
+    - Please write the file path based on index.html
+*/
+.logo{
+    position: absolute;
+
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    width: 25vw;
+}
+
+@media screen and (max-width: 640px) {
+    .logo{
+        width: 45vw;
+    }
+}

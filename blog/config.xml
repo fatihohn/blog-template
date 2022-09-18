@@ -1,0 +1,50 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget
+        id="com.artifriends.frontle"
+        version="0.4.0"
+        xmlns="http://www.w3.org/ns/widgets"
+        xmlns:cdv="http://cordova.apache.org/ns/1.0"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+>
+    <name>Frontle</name>
+    <description>The easiest multi-platform SPA framework</description>
+    <author email="y37653@gmail.com" href="https://github.com/MushStory">Frontle Developer</author>
+    <content src="index.html" />
+    <access origin="*"/>
+    <allow-intent href="file:///*/*"/>
+    <allow-intent href="http://*/*" />
+    <allow-intent href="https://*/*" />
+    <allow-intent href="tel:*" />
+    <allow-intent href="sms:*" />
+    <allow-intent href="mailto:*" launch-external="yes"/>
+    <allow-intent href="geo:*" />
+    <allow-intent href="intent:*" />
+
+    <platform name="android">
+        <allow-intent href="market:*" />
+
+        <preference name="AndroidLaunchMode" value="singleTop" />
+        <preference name="AndroidXEnabled" value="true" />
+        <preference name="orientation" value="portrait"/>
+
+        <edit-config file="app/src/main/AndroidManifest.xml" mode="merge" target="/manifest/application">
+            <application android:usesCleartextTraffic="true"/>
+        </edit-config>
+        <edit-config file="app/src/main/AndroidManifest.xml" mode="merge" target="/manifest/application/activity">
+            <activity android:configChanges="orientation|screenSize|keyboardHidden" android:windowSoftInputMode="adjustPan" />
+        </edit-config>
+    </platform>
+
+    <platform name="ios">
+        <allow-intent href="itms:*" />
+        <allow-intent href="itms-apps:*" />
+
+        <preference name="EnableViewportScale" value="true" />
+        <preference name="KeyboardResize" value="false" />
+        <preference name="orientation" value="portrait"/>
+    </platform>
+
+    <platform name="electron">
+        <preference name="ElectronSettingsFilePath" value="res/electron/settings.json" />
+    </platform>
+</widget>
